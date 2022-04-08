@@ -11,7 +11,7 @@ def calculate_mean(list):
     return sum/len(list)
 
 def calculate_medium(list):
-    if Math_tools.IsOdd(len(list)):
+    if tools.IsOdd(len(list)):
         return list[int(len(list)/2)]
     else:
         return(list[int(len(list)/2)] + list[int(len(list)/2) + 1]) / 2
