@@ -1,4 +1,4 @@
-import Math_tools
+import tools
 
 def calculate_mean(list):
     b = 0
@@ -32,5 +32,3 @@ def get_input(list):
     if c == 1:
         print(list)
         return get_input(list)
-
-print(calculate_medium(get_input([])))
