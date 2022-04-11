@@ -80,5 +80,3 @@ def fix_missing_part_return(r,l,h,area,curved_surface_area,volume):
         volume = math.pi * r * r * h / 3
     list = [r,l,h,area,curved_surface_area,volume]
     return list
-
-print(fix_missing_part_return(6,10,None,None,None,None))
