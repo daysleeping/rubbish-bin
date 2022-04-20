@@ -46,6 +46,23 @@ def Op(x,m,list,list_1):
     else:
         User(x,m,list,list_1)
 
+def Op_1(x, m, list, list_1):
+    ra = random.randint(1, 2)
+    r = abs(int(math.remainder(x, m + 1)))
+    if r == 0 and ra == 1:
+        x = x - random.randint(1, m)
+    else:
+        x = x - r
+    list.append(x)
+    if x == 0:
+        print("Oh. You loss")
+        Printout = input(f'Would you like to print out the process? Type "Yes" if you want. ')
+        if Printout == "Yes":
+            print(list)
+            return None
+    else:
+        User(x, m, list, list_1)
+
 def get_Original_stones_numbers():
     try:
         x = int(input(f'Original stones numbers : '))
@@ -61,7 +78,6 @@ def get_Original_stones_number():
     except:
         list = get_Original_stones_number()
         return list
-
 
 x = get_Original_stones_numbers()
 y = get_Original_stones_number()
