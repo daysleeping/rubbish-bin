@@ -1,6 +1,6 @@
-answer = ['cultural traditions','beauty trends','plump','attractive','desirable','poverty','prosperity','afford','popularity','multicultural','evolve','tattooing','expand','a fashionable trend','a sign of beauty','body piercings','status and wealth','doubtless to say','beliefs','define','in danger','preserve','landmarks','future generations','safeguard','unique','identity','historical buildings','impact','rural villages','entire','united people','symbolic','urban areas','historical importance','rituals','worship','ancestor','convenient','adapt'] #Put your words in this list
+answer = ['cultural traditions','beauty trends','plump','attractive','desirable','poverty','prosperity','afford','popularity','multicultural','evolve','tattooing','expand','a fashionable trend','a sign of beauty','body piercings','status and wealth','doubtless to say','beliefs','define','in danger','preserve','landmarks','future generations','safeguard','unique','identity','historical buildings','impact','rural villages','entire','united people','symbolic','urban areas','historical importance','rituals','worship','ancestor','convenient','adapt']
 user_answer = []
-a = answer.copy
+a = answer.copy()
 
 print(len(answer))
 
@@ -24,7 +24,6 @@ def check_without_order(user_answer,answer):
                 answer.pop(b)
                 break
             else:
-                print(f'your answer {a} : {user_answer[a]} != correct answer {b} : {answer[b]}')
                 b += 1
         a += 1
         b = 0
@@ -35,3 +34,4 @@ get_user()
 list = check_without_order(user_answer,answer)
 
 print(f'Not answered : {list[0]} \nAnswered successfully : {list[1]} \nYour answer : {user_answer} \nCorrect answer : {a}')
+print(f'Your score : {len(list[1])} / {len(a)}')
